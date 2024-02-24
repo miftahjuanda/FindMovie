@@ -34,8 +34,8 @@ internal class FindMovieViewController: UIViewController {
         collectionView.register(MovieItemsCollectionViewCell.self,
                                 forCellWithReuseIdentifier: MovieItemsCollectionViewCell.id)
         collectionView.backgroundColor = .lightGray.withAlphaComponent(0.2)
-        collectionView.showsVerticalScrollIndicator = false
         collectionView.contentInset = .init(top: 8, left: 10, bottom: 0, right: 10)
+        collectionView.delegate = self
         return collectionView
     }()
     
@@ -120,13 +120,24 @@ extension FindMovieViewController: UISearchBarDelegate {
     }
 }
 
-// MARK: - DataSource
-extension FindMovieViewController {
+// MARK: - CollectionView DataSource and Delegate
+extension FindMovieViewController: UICollectionViewDelegateFlowLayout {
     private func applySnapshot(items: [SearchEntity], animatingDifferences: Bool = true) {
         var snapshot: NSDiffableDataSourceSnapshot<String, SearchEntity> = .init()
         snapshot.appendSections([""])
         snapshot.appendItems(items)
         
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.size.height
+        
+        if !viewModel.isFetchingData && (offsetY > contentHeight - height) {
+            print("cek load more", contentHeight, height)
+            viewModel.pagination()
+        }
     }
 }

@@ -20,6 +20,6 @@ internal final class FindMovieProcessor: FindMovieProcessorProtocol {
         }) ?? []
         
         return FindMovieEntity(search: searchEntity,
-                                     totalResults: model?.totalResults ?? "")
+                                     totalResults: Int(model?.totalResults ?? "") ?? 0)
     }
 }

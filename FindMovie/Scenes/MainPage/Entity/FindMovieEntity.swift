@@ -9,7 +9,7 @@ import Foundation
 
 struct FindMovieEntity: Decodable {
     var search: [SearchEntity]
-    var totalResults: String
+    var totalResults: Int
 }
 
 struct SearchEntity: Decodable, Hashable {
