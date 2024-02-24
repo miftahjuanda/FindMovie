@@ -9,6 +9,7 @@ target 'FindMovie' do
   pod 'SnapKit', '~> 5.6.0'
   pod 'Alamofire'
   pod 'ShimmerView'
+  pod 'Kingfisher'
 
   target 'FindMovieTests' do
     inherit! :search_paths

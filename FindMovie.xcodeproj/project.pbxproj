@@ -17,6 +17,9 @@
 		B03411022B89AA8B00A3D160 /* FindMovieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411012B89AA8B00A3D160 /* FindMovieUITests.swift */; };
 		B03411042B89AA8B00A3D160 /* FindMovieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411032B89AA8B00A3D160 /* FindMovieUITestsLaunchTests.swift */; };
 		B03411152B89B07D00A3D160 /* FindMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411142B89B07D00A3D160 /* FindMovieViewController.swift */; };
+		B03411192B89B42400A3D160 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411182B89B42400A3D160 /* ImageView.swift */; };
+		B034111B2B89B49F00A3D160 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034111A2B89B49F00A3D160 /* LabelView.swift */; };
+		B034111D2B89B4E600A3D160 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034111C2B89B4E600A3D160 /* StackView.swift */; };
 		CA18726CB9148211EDCC07A9 /* Pods_FindMovieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6672C22B83CA92C1799BC01 /* Pods_FindMovieTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,9 @@
 		B03411012B89AA8B00A3D160 /* FindMovieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieUITests.swift; sourceTree = "<group>"; };
 		B03411032B89AA8B00A3D160 /* FindMovieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B03411142B89B07D00A3D160 /* FindMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieViewController.swift; sourceTree = "<group>"; };
+		B03411182B89B42400A3D160 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		B034111A2B89B49F00A3D160 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
+		B034111C2B89B4E600A3D160 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
 		B91C172A18C0EF0B7BE60461 /* Pods-FindMovie-FindMovieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMovie-FindMovieUITests.debug.xcconfig"; path = "Target Support Files/Pods-FindMovie-FindMovieUITests/Pods-FindMovie-FindMovieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE84A0DC069E6E675BC39FBD /* Pods-FindMovieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMovieTests.release.xcconfig"; path = "Target Support Files/Pods-FindMovieTests/Pods-FindMovieTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +143,7 @@
 		B03410DF2B89AA8900A3D160 /* FindMovie */ = {
 			isa = PBXGroup;
 			children = (
+				B03411162B89B40300A3D160 /* Core */,
 				B03411122B89B03300A3D160 /* Scenes */,
 				B03411102B89AF0300A3D160 /* Applications */,
 				B03410E92B89AA8B00A3D160 /* Assets.xcassets */,
@@ -186,6 +193,24 @@
 				B03411142B89B07D00A3D160 /* FindMovieViewController.swift */,
 			);
 			path = MainPage;
+			sourceTree = "<group>";
+		};
+		B03411162B89B40300A3D160 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B03411172B89B40800A3D160 /* UiComponents */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B03411172B89B40800A3D160 /* UiComponents */ = {
+			isa = PBXGroup;
+			children = (
+				B03411182B89B42400A3D160 /* ImageView.swift */,
+				B034111A2B89B49F00A3D160 /* LabelView.swift */,
+				B034111C2B89B4E600A3D160 /* StackView.swift */,
+			);
+			path = UiComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,9 +451,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03411192B89B42400A3D160 /* ImageView.swift in Sources */,
 				B03411152B89B07D00A3D160 /* FindMovieViewController.swift in Sources */,
 				B03410E12B89AA8900A3D160 /* AppDelegate.swift in Sources */,
 				B03410E32B89AA8900A3D160 /* SceneDelegate.swift in Sources */,
+				B034111B2B89B49F00A3D160 /* LabelView.swift in Sources */,
+				B034111D2B89B4E600A3D160 /* StackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
