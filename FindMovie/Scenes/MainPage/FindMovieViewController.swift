@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FindMovieViewController.swift
 //  FindMovie
 //
 //  Created by Miftah Juanda Batubara on 24/02/24.
@@ -7,13 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+internal class FindMovieViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
     }
-
-
 }
-
