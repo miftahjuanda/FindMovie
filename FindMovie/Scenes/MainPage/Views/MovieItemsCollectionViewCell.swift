@@ -14,7 +14,6 @@ class MovieItemsCollectionViewCell: UICollectionViewCell {
     
     private let image = ImageView()
     private let titlelabel = LabelView("title", textColor: .black,
-                                       lines: 1,
                                        font: .systemFont(ofSize: 13,
                                                          weight: .bold))
     private let subTitlelabel = LabelView("subTitle", textColor: .gray,
@@ -30,6 +29,12 @@ class MovieItemsCollectionViewCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setData(_ data: SearchEntity) {
+        image.imageWithUrl(with: data.poster)
+        titlelabel.text = data.title
+        subTitlelabel.text = "Released in "+data.year
     }
     
     private func setuiCell() {

@@ -21,6 +21,17 @@
 		B034111B2B89B49F00A3D160 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034111A2B89B49F00A3D160 /* LabelView.swift */; };
 		B034111D2B89B4E600A3D160 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034111C2B89B4E600A3D160 /* StackView.swift */; };
 		B03411242B89C63A00A3D160 /* MovieItemsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411232B89C63A00A3D160 /* MovieItemsCollectionViewCell.swift */; };
+		B03411272B89D7F000A3D160 /* AlamofireHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411262B89D7F000A3D160 /* AlamofireHttpClient.swift */; };
+		B03411292B89D81300A3D160 /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411282B89D81300A3D160 /* RestApi.swift */; };
+		B034112C2B89D8DE00A3D160 /* Combine+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034112B2B89D8DE00A3D160 /* Combine+Ext.swift */; };
+		B034112F2B89DAAA00A3D160 /* FindMovieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034112E2B89DAAA00A3D160 /* FindMovieUseCase.swift */; };
+		B03411342B89DF2F00A3D160 /* FindMovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411332B89DF2F00A3D160 /* FindMovieResponse.swift */; };
+		B03411362B89DF5600A3D160 /* FindMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411352B89DF5600A3D160 /* FindMovieRequest.swift */; };
+		B03411392B89E05C00A3D160 /* FindMovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411382B89E05C00A3D160 /* FindMovieEntity.swift */; };
+		B034113B2B89E2F600A3D160 /* FindMovieProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034113A2B89E2F600A3D160 /* FindMovieProcessor.swift */; };
+		B034113E2B89EABF00A3D160 /* ApiConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034113D2B89EABF00A3D160 /* ApiConfigManager.swift */; };
+		B03411402B89EBFF00A3D160 /* FindMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034113F2B89EBFF00A3D160 /* FindMovieViewModel.swift */; };
+		B03411422B8A08E700A3D160 /* ViewTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411412B8A08E700A3D160 /* ViewTypes.swift */; };
 		CA18726CB9148211EDCC07A9 /* Pods_FindMovieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6672C22B83CA92C1799BC01 /* Pods_FindMovieTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +76,17 @@
 		B034111A2B89B49F00A3D160 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
 		B034111C2B89B4E600A3D160 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
 		B03411232B89C63A00A3D160 /* MovieItemsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItemsCollectionViewCell.swift; sourceTree = "<group>"; };
+		B03411262B89D7F000A3D160 /* AlamofireHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireHttpClient.swift; sourceTree = "<group>"; };
+		B03411282B89D81300A3D160 /* RestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApi.swift; sourceTree = "<group>"; };
+		B034112B2B89D8DE00A3D160 /* Combine+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Ext.swift"; sourceTree = "<group>"; };
+		B034112E2B89DAAA00A3D160 /* FindMovieUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieUseCase.swift; sourceTree = "<group>"; };
+		B03411332B89DF2F00A3D160 /* FindMovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieResponse.swift; sourceTree = "<group>"; };
+		B03411352B89DF5600A3D160 /* FindMovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieRequest.swift; sourceTree = "<group>"; };
+		B03411382B89E05C00A3D160 /* FindMovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieEntity.swift; sourceTree = "<group>"; };
+		B034113A2B89E2F600A3D160 /* FindMovieProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieProcessor.swift; sourceTree = "<group>"; };
+		B034113D2B89EABF00A3D160 /* ApiConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfigManager.swift; sourceTree = "<group>"; };
+		B034113F2B89EBFF00A3D160 /* FindMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieViewModel.swift; sourceTree = "<group>"; };
+		B03411412B8A08E700A3D160 /* ViewTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTypes.swift; sourceTree = "<group>"; };
 		B91C172A18C0EF0B7BE60461 /* Pods-FindMovie-FindMovieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMovie-FindMovieUITests.debug.xcconfig"; path = "Target Support Files/Pods-FindMovie-FindMovieUITests/Pods-FindMovie-FindMovieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE84A0DC069E6E675BC39FBD /* Pods-FindMovieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMovieTests.release.xcconfig"; path = "Target Support Files/Pods-FindMovieTests/Pods-FindMovieTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +167,7 @@
 		B03410DF2B89AA8900A3D160 /* FindMovie */ = {
 			isa = PBXGroup;
 			children = (
+				B03411302B89DF0B00A3D160 /* Data */,
 				B03411162B89B40300A3D160 /* Core */,
 				B03411122B89B03300A3D160 /* Scenes */,
 				B03411102B89AF0300A3D160 /* Applications */,
@@ -192,8 +215,11 @@
 		B03411132B89B03F00A3D160 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				B03411372B89DFF000A3D160 /* Entity */,
+				B034112D2B89DA7B00A3D160 /* Domain */,
 				B034111E2B89C5BB00A3D160 /* Views */,
 				B03411142B89B07D00A3D160 /* FindMovieViewController.swift */,
+				B034113F2B89EBFF00A3D160 /* FindMovieViewModel.swift */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -201,6 +227,9 @@
 		B03411162B89B40300A3D160 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B034113C2B89E9E800A3D160 /* Utilities */,
+				B034112A2B89D8CA00A3D160 /* Extensions */,
+				B03411252B89D7D600A3D160 /* Networking */,
 				B03411172B89B40800A3D160 /* UiComponents */,
 			);
 			path = Core;
@@ -222,6 +251,74 @@
 				B03411232B89C63A00A3D160 /* MovieItemsCollectionViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B03411252B89D7D600A3D160 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B03411262B89D7F000A3D160 /* AlamofireHttpClient.swift */,
+				B03411282B89D81300A3D160 /* RestApi.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B034112A2B89D8CA00A3D160 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B034112B2B89D8DE00A3D160 /* Combine+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B034112D2B89DA7B00A3D160 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B034112E2B89DAAA00A3D160 /* FindMovieUseCase.swift */,
+				B034113A2B89E2F600A3D160 /* FindMovieProcessor.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B03411302B89DF0B00A3D160 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B03411322B89DF1B00A3D160 /* Response */,
+				B03411312B89DF1100A3D160 /* Request */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B03411312B89DF1100A3D160 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				B03411352B89DF5600A3D160 /* FindMovieRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		B03411322B89DF1B00A3D160 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				B03411332B89DF2F00A3D160 /* FindMovieResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		B03411372B89DFF000A3D160 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B03411382B89E05C00A3D160 /* FindMovieEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B034113C2B89E9E800A3D160 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B034113D2B89EABF00A3D160 /* ApiConfigManager.swift */,
+				B03411412B8A08E700A3D160 /* ViewTypes.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,13 +559,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B034113B2B89E2F600A3D160 /* FindMovieProcessor.swift in Sources */,
+				B03411362B89DF5600A3D160 /* FindMovieRequest.swift in Sources */,
 				B03411192B89B42400A3D160 /* ImageView.swift in Sources */,
 				B03411152B89B07D00A3D160 /* FindMovieViewController.swift in Sources */,
 				B03410E12B89AA8900A3D160 /* AppDelegate.swift in Sources */,
+				B034112F2B89DAAA00A3D160 /* FindMovieUseCase.swift in Sources */,
+				B034112C2B89D8DE00A3D160 /* Combine+Ext.swift in Sources */,
+				B03411272B89D7F000A3D160 /* AlamofireHttpClient.swift in Sources */,
 				B03410E32B89AA8900A3D160 /* SceneDelegate.swift in Sources */,
 				B034111B2B89B49F00A3D160 /* LabelView.swift in Sources */,
 				B034111D2B89B4E600A3D160 /* StackView.swift in Sources */,
 				B03411242B89C63A00A3D160 /* MovieItemsCollectionViewCell.swift in Sources */,
+				B03411402B89EBFF00A3D160 /* FindMovieViewModel.swift in Sources */,
+				B034113E2B89EABF00A3D160 /* ApiConfigManager.swift in Sources */,
+				B03411342B89DF2F00A3D160 /* FindMovieResponse.swift in Sources */,
+				B03411392B89E05C00A3D160 /* FindMovieEntity.swift in Sources */,
+				B03411422B8A08E700A3D160 /* ViewTypes.swift in Sources */,
+				B03411292B89D81300A3D160 /* RestApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
