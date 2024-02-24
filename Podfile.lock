@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (5.8.1)
+  - ShimmerView (0.5.0)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - ShimmerView
+  - SnapKit (~> 5.6.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - ShimmerView
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  ShimmerView: ffde81304d8fb29127cbce492d14430dca288ebb
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: 72429816bf1d532211b0b74924d43aecc59812e1
+
+COCOAPODS: 1.14.3
