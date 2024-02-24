@@ -44,13 +44,13 @@ internal final class ImageView: UIImageView {
     func imageWithUrl(with imageURL: String) {
         loadingIndicator.startAnimating()
         guard let url = URL(string: imageURL) else { return }
-        kf.setImage(with: url, placeholder: nil, options: nil) { result in
+        self.kf.setImage(with: url, placeholder: nil, options: nil) { result in
             self.loadingIndicator.stopAnimating()
             switch result {
             case .success(_):
                 break
             case .failure(_):
-                self.image = UIImage(named: "DataEmptyIcon")
+                self.image = UIImage(systemName: "photo.fill")
                 break
             }
         }
