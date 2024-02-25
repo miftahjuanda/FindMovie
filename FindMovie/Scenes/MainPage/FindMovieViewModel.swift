@@ -15,6 +15,7 @@ protocol FindMovieViewModelProtocol {
     func findMovie(keyword: String)
     func pagination()
     func reloadSearch()
+    func initialData()
 }
 
 internal class FindMovieViewModel: FindMovieViewModelProtocol {
@@ -66,6 +67,10 @@ internal class FindMovieViewModel: FindMovieViewModelProtocol {
                     if findMovie.totalResults != value.totalResults {
                         self.findMovie = value
                         self.currentPage += 1
+                        
+                        if self.useCase.isCoreDataEmpty() {
+                            self.saveToLocal(value.search)
+                        }
                     } else {
                         self.totalResults = self.findMovie.search.count
                         self.findMovie.search.append(contentsOf: value.search)
@@ -98,6 +103,57 @@ internal class FindMovieViewModel: FindMovieViewModelProtocol {
         if retryCount > 0 {
             retryCount -= 1
             findMovie(keyword: keywordValue)
+        }
+    }
+    
+    func initialData() {
+        if useCase.isCoreDataEmpty() && !findMovie.search.isEmpty {
+            saveToLocal(findMovie.search)
+        } else if !useCase.isCoreDataEmpty() {
+            getMoviesFromLocal()
+        } else {
+            reloadSearch()
+        }
+    }
+    
+}
+
+// MARK: - Private functions
+extension FindMovieViewModel {
+    private func getMoviesFromLocal() {
+        useCase.getMoviesFromLocal()
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { [weak self] finished in
+                guard let self = self else { return }
+                
+                if case .failure(let failure) = finished {
+                    self.viewType.send(.failure(failure.localizedDescription))
+                }
+                
+            }, receiveValue: { [weak self] value in
+                guard let self = self else { return }
+                
+                if !value.isEmpty {
+                    self.findMovie.search.append(contentsOf: value)
+                    self.viewType.send(.success(self.findMovie.search))
+                }
+            }).store(in: cancelBag)
+    }
+    
+    private func saveToLocal(_ data: [SearchEntity]) {
+        for movie in data {
+            useCase.saveToLocal(movie: movie)
+                .receive(on: DispatchQueue.main)
+                .sink(receiveCompletion: { [weak self] finished in
+                    guard let self = self else { return }
+                    
+                    if case .failure(let failure) = finished {
+                        self.viewType.send(.failure(failure.localizedDescription))
+                    }
+                }, receiveValue: { [weak self] value in
+                    guard let self = self else { return }
+                    print("Success save to local")
+                }).store(in: cancelBag)
         }
     }
     

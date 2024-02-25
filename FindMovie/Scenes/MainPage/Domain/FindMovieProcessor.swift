@@ -9,6 +9,7 @@ import Foundation
 
 protocol FindMovieProcessorProtocol {
     func mapDataToEntity(_ model: FindMovieResponse?) -> FindMovieEntity
+    func mapLocalDataToEntity(_ model: [LocalMovieData]) -> [SearchEntity]
 }
 
 internal final class FindMovieProcessor: FindMovieProcessorProtocol {
@@ -22,7 +23,18 @@ internal final class FindMovieProcessor: FindMovieProcessorProtocol {
         
         let response: Bool = model?.response?.lowercased() == "true" ? true : false
         return FindMovieEntity(search: searchEntity,
-                               totalResults: Int(model?.totalResults ?? "") ?? 0, 
+                               totalResults: Int(model?.totalResults ?? "") ?? 0,
                                response: response)
+    }
+    
+    func mapLocalDataToEntity(_ model: [LocalMovieData]) -> [SearchEntity] {
+        let movies: [SearchEntity] = model.map({
+            SearchEntity(title: $0.title ?? "",
+                         year: $0.year ?? "",
+                         poster: $0.imageUrl ?? "",
+                         isLoading: false)
+        })
+        
+        return movies
     }
 }

@@ -35,6 +35,8 @@
 		B03411442B8A560C00A3D160 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411432B8A560C00A3D160 /* String+Ext.swift */; };
 		B03411482B8B16C300A3D160 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411472B8B16C300A3D160 /* NetworkManager.swift */; };
 		B034114A2B8B19B800A3D160 /* ViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411492B8B19B800A3D160 /* ViewController+Ext.swift */; };
+		B03411522B8B4B9B00A3D160 /* LocalStorageStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411512B8B4B9B00A3D160 /* LocalStorageStack.swift */; };
+		B03411552B8B4C7300A3D160 /* LocalMovieData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B03411532B8B4C7300A3D160 /* LocalMovieData.xcdatamodeld */; };
 		CA18726CB9148211EDCC07A9 /* Pods_FindMovieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6672C22B83CA92C1799BC01 /* Pods_FindMovieTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +95,8 @@
 		B03411432B8A560C00A3D160 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		B03411472B8B16C300A3D160 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B03411492B8B19B800A3D160 /* ViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Ext.swift"; sourceTree = "<group>"; };
+		B03411512B8B4B9B00A3D160 /* LocalStorageStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageStack.swift; sourceTree = "<group>"; };
+		B03411542B8B4C7300A3D160 /* LocalMovie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalMovie.xcdatamodel; sourceTree = "<group>"; };
 		B91C172A18C0EF0B7BE60461 /* Pods-FindMovie-FindMovieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMovie-FindMovieUITests.debug.xcconfig"; path = "Target Support Files/Pods-FindMovie-FindMovieUITests/Pods-FindMovie-FindMovieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE84A0DC069E6E675BC39FBD /* Pods-FindMovieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMovieTests.release.xcconfig"; path = "Target Support Files/Pods-FindMovieTests/Pods-FindMovieTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -233,6 +237,7 @@
 		B03411162B89B40300A3D160 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B03411502B8B4B6E00A3D160 /* LocalStorage */,
 				B034113C2B89E9E800A3D160 /* Utilities */,
 				B034112A2B89D8CA00A3D160 /* Extensions */,
 				B03411252B89D7D600A3D160 /* Networking */,
@@ -290,6 +295,7 @@
 		B03411302B89DF0B00A3D160 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B034114C2B8B4AAC00A3D160 /* CoreData */,
 				B03411322B89DF1B00A3D160 /* Response */,
 				B03411312B89DF1100A3D160 /* Request */,
 			);
@@ -328,6 +334,22 @@
 				B03411472B8B16C300A3D160 /* NetworkManager.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B034114C2B8B4AAC00A3D160 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B03411532B8B4C7300A3D160 /* LocalMovieData.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		B03411502B8B4B6E00A3D160 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				B03411512B8B4B9B00A3D160 /* LocalStorageStack.swift */,
+			);
+			path = LocalStorage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -577,7 +599,9 @@
 				B034112C2B89D8DE00A3D160 /* Combine+Ext.swift in Sources */,
 				B03411272B89D7F000A3D160 /* AlamofireHttpClient.swift in Sources */,
 				B034114A2B8B19B800A3D160 /* ViewController+Ext.swift in Sources */,
+				B03411522B8B4B9B00A3D160 /* LocalStorageStack.swift in Sources */,
 				B03410E32B89AA8900A3D160 /* SceneDelegate.swift in Sources */,
+				B03411552B8B4C7300A3D160 /* LocalMovieData.xcdatamodeld in Sources */,
 				B034111B2B89B49F00A3D160 /* LabelView.swift in Sources */,
 				B034111D2B89B4E600A3D160 /* StackView.swift in Sources */,
 				B03411242B89C63A00A3D160 /* MovieItemsCollectionViewCell.swift in Sources */,
@@ -935,6 +959,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B03411532B8B4C7300A3D160 /* LocalMovieData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B03411542B8B4C7300A3D160 /* LocalMovie.xcdatamodel */,
+			);
+			currentVersion = B03411542B8B4C7300A3D160 /* LocalMovie.xcdatamodel */;
+			path = LocalMovieData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B03410D52B89AA8900A3D160 /* Project object */;
 }

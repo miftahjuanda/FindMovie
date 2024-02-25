@@ -96,6 +96,8 @@ internal class FindMovieViewController: UIViewController {
             .sink(receiveValue: {[unowned self] state in
                 self.renderView(state)
             }).store(in: cancellables)
+        
+        viewModel.initialData()
     }
     
     private func renderView(_ viewType: ViewTypes<[SearchEntity]>) {
