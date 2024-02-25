@@ -42,15 +42,26 @@ internal final class ImageView: UIImageView {
     }
     
     func imageWithUrl(with imageURL: String) {
+        let fill = UIImage(systemName: "photo.fill")?.withTintColor(.lightGray.withAlphaComponent(0.5),
+                                                                    renderingMode: .alwaysOriginal)
         loadingIndicator.startAnimating()
-        guard let url = URL(string: imageURL) else { return }
+        
+        guard imageURL.isStringURL(), let url = URL(string: imageURL) else {
+            DispatchQueue.main.async {
+                self.loadingIndicator.stopAnimating()
+                self.image = fill
+            }
+            return
+        }
+        
+        
         self.kf.setImage(with: url, placeholder: nil, options: nil) { result in
             self.loadingIndicator.stopAnimating()
             switch result {
             case .success(_):
                 break
             case .failure(_):
-                self.image = UIImage(systemName: "photo.fill")
+                self.image = fill
                 break
             }
         }

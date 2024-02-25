@@ -32,6 +32,7 @@
 		B034113E2B89EABF00A3D160 /* ApiConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034113D2B89EABF00A3D160 /* ApiConfigManager.swift */; };
 		B03411402B89EBFF00A3D160 /* FindMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034113F2B89EBFF00A3D160 /* FindMovieViewModel.swift */; };
 		B03411422B8A08E700A3D160 /* ViewTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411412B8A08E700A3D160 /* ViewTypes.swift */; };
+		B03411442B8A560C00A3D160 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411432B8A560C00A3D160 /* String+Ext.swift */; };
 		CA18726CB9148211EDCC07A9 /* Pods_FindMovieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6672C22B83CA92C1799BC01 /* Pods_FindMovieTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		B034113D2B89EABF00A3D160 /* ApiConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfigManager.swift; sourceTree = "<group>"; };
 		B034113F2B89EBFF00A3D160 /* FindMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieViewModel.swift; sourceTree = "<group>"; };
 		B03411412B8A08E700A3D160 /* ViewTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTypes.swift; sourceTree = "<group>"; };
+		B03411432B8A560C00A3D160 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		B91C172A18C0EF0B7BE60461 /* Pods-FindMovie-FindMovieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMovie-FindMovieUITests.debug.xcconfig"; path = "Target Support Files/Pods-FindMovie-FindMovieUITests/Pods-FindMovie-FindMovieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE84A0DC069E6E675BC39FBD /* Pods-FindMovieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMovieTests.release.xcconfig"; path = "Target Support Files/Pods-FindMovieTests/Pods-FindMovieTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -266,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				B034112B2B89D8DE00A3D160 /* Combine+Ext.swift */,
+				B03411432B8A560C00A3D160 /* String+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				B034111D2B89B4E600A3D160 /* StackView.swift in Sources */,
 				B03411242B89C63A00A3D160 /* MovieItemsCollectionViewCell.swift in Sources */,
 				B03411402B89EBFF00A3D160 /* FindMovieViewModel.swift in Sources */,
+				B03411442B8A560C00A3D160 /* String+Ext.swift in Sources */,
 				B034113E2B89EABF00A3D160 /* ApiConfigManager.swift in Sources */,
 				B03411342B89DF2F00A3D160 /* FindMovieResponse.swift in Sources */,
 				B03411392B89E05C00A3D160 /* FindMovieEntity.swift in Sources */,

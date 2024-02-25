@@ -8,18 +8,15 @@
 import UIKit
 import SnapKit
 import Kingfisher
+import ShimmerView
 
 class MovieItemsCollectionViewCell: UICollectionViewCell {
     static let id = "MovieItemsCollectionViewCell"
     
     private let image = ImageView()
-    private let titlelabel = LabelView("title", textColor: .black,
-                                       font: .systemFont(ofSize: 13,
-                                                         weight: .bold))
-    private let subTitlelabel = LabelView("subTitle", textColor: .gray,
-                                          lines: 1,
-                                          font: .systemFont(ofSize: 12,
-                                                            weight: .regular))
+    private var titlelabel = LabelView()
+    private var subTitlelabel = LabelView()
+    private var shimmer = ShimmerView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,9 +29,35 @@ class MovieItemsCollectionViewCell: UICollectionViewCell {
     }
     
     func setData(_ data: SearchEntity) {
-        image.imageWithUrl(with: data.poster)
-        titlelabel.text = data.title
-        subTitlelabel.text = "Released in "+data.year
+        if data.isLoading {
+            setShimmerView()
+        } else {
+            shimmer.stopAnimating()
+            titlelabel.customLabel(data.title,
+                                   textColor: .black,
+                                   font: .systemFont(ofSize: 13,
+                                                     weight: .bold))
+            subTitlelabel.customLabel("Released in "+data.year,
+                                      textColor: .gray,
+                                      lines: 1,
+                                      font: .systemFont(ofSize: 12,
+                                                        weight: .regular))
+            image.imageWithUrl(with: data.poster)
+        }
+    }
+    
+    private func setShimmerView() {
+        image.image = UIImage(systemName: "photo.fill")?.withTintColor(.lightGray.withAlphaComponent(0.5),
+                                                                       renderingMode: .alwaysOriginal)
+        titlelabel.customLabel("-",
+                               textColor: .clear,
+                               backgroundColor: .lightGray.withAlphaComponent(0.5))
+        
+        subTitlelabel.customLabel("-",
+                                  textColor: .clear,
+                                  backgroundColor: .lightGray.withAlphaComponent(0.5))
+        
+        shimmer.startAnimating()
     }
     
     private func setuiCell() {
@@ -43,8 +66,10 @@ class MovieItemsCollectionViewCell: UICollectionViewCell {
         contentView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         contentView.layer.cornerRadius = 22
         
+        titlelabel.contentHuggingPriority(for: .vertical)
         titlelabel.lineBreakMode = .byWordWrapping
         subTitlelabel.lineBreakMode = .byWordWrapping
+        subTitlelabel.contentHuggingPriority(for: .horizontal)
         image.layer.cornerRadius = 8
         
         let mainStack = StackView {
@@ -61,6 +86,13 @@ class MovieItemsCollectionViewCell: UICollectionViewCell {
         
         mainStack.setCustomSpacing(8, after: mainStack.subviews[0])
         mainStack.setCustomSpacing(1, after: mainStack.subviews[1])
+        
+        shimmer.style = .init(baseColor: .clear, highlightColor: .lightGray.withAlphaComponent(0.13),
+                              duration: 0.7, interval: 0.3, effectSpan: .points(150), effectAngle: 0 * CGFloat.pi)
+        contentView.addSubview(shimmer)
+        shimmer.snp.makeConstraints({ make in
+            make.top.leading.trailing.bottom.equalToSuperview()
+        })
         
         layoutIfNeeded()
     }

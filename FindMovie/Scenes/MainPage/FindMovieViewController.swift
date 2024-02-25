@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ShimmerView
 
 internal class FindMovieViewController: UIViewController {
     // MARK: - Properties
@@ -16,7 +17,7 @@ internal class FindMovieViewController: UIViewController {
         search.searchBar.tintColor = .black
         search.searchBar.layer.cornerRadius = 12
         search.searchBar.searchBarStyle = .minimal
-        search.searchBar.placeholder = "Search"
+        search.searchBar.placeholder = "Find your movie"
         search.searchBar.backgroundColor = .white
         search.searchBar.setImage(UIImage(systemName: "magnifyingglass"), for: .search, state: .normal)
         search.searchBar.delegate = self
@@ -35,11 +36,11 @@ internal class FindMovieViewController: UIViewController {
                                 forCellWithReuseIdentifier: MovieItemsCollectionViewCell.id)
         collectionView.backgroundColor = .lightGray.withAlphaComponent(0.2)
         collectionView.contentInset = .init(top: 8, left: 10, bottom: 0, right: 10)
+        collectionView.scrollsToTop = false
         collectionView.delegate = self
         return collectionView
     }()
     
-//    SearchEntity
     private lazy var dataSource = UICollectionViewDiffableDataSource<String, SearchEntity>(collectionView: moviesCollectionView) { [weak self] (collectionView, indexPath, value) -> UICollectionViewCell? in
         guard let self = self else { return UICollectionViewCell() }
         
@@ -94,9 +95,14 @@ internal class FindMovieViewController: UIViewController {
     private func renderView(_ viewType: ViewTypes<[SearchEntity]>) {
         switch viewType {
         case .loading:
-            print("Loading")
+            DispatchQueue.main.async {
+                self.applySnapshot(items: [SearchEntity(), SearchEntity(), SearchEntity(),
+                                      SearchEntity(), SearchEntity(), SearchEntity()])
+            }
         case .success(let data):
-            applySnapshot(items: data)
+            DispatchQueue.main.async {
+                self.applySnapshot(items: data)
+            }
         case .noResults:
             print("Data nil")
         case .failure(let fail):
@@ -110,6 +116,8 @@ extension FindMovieViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.endEditing(true)
         if let keyword = searchBar.text {
+            self.searchBar.isActive = false
+            self.searchBar.searchBar.text = keyword
             viewModel.findMovie(keyword: keyword)
         }
     }
@@ -135,8 +143,7 @@ extension FindMovieViewController: UICollectionViewDelegateFlowLayout {
         let contentHeight = scrollView.contentSize.height
         let height = scrollView.frame.size.height
         
-        if !viewModel.isFetchingData && (offsetY > contentHeight - height) {
-            print("cek load more", contentHeight, height)
+        if !viewModel.isFetchPagination && (offsetY > contentHeight - height) {
             viewModel.pagination()
         }
     }

@@ -16,7 +16,8 @@ internal final class FindMovieProcessor: FindMovieProcessorProtocol {
         let searchEntity = model?.search?.map({
             SearchEntity(title: $0.title ?? "",
                          year: $0.year ?? "",
-                         poster: $0.poster ?? "")
+                         poster: $0.poster ?? "",
+                         isLoading: false)
         }) ?? []
         
         return FindMovieEntity(search: searchEntity,

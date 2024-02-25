@@ -13,6 +13,9 @@ struct FindMovieEntity: Decodable {
 }
 
 struct SearchEntity: Decodable, Hashable {
-    var title, year: String
-    var poster: String
+    var id = UUID()
+    var title: String = ""
+    var year: String = ""
+    var poster: String = "-"
+    var isLoading: Bool = true
 }
