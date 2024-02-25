@@ -50,11 +50,16 @@ internal class FindMovieViewController: UIViewController {
         return cell
     }
     
+    private var networkManager = NetworkReachability.shared
     private var viewModel: FindMovieViewModelProtocol
     
     init(viewModel: FindMovieViewModelProtocol = FindMovieViewModel()) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+    }
+    
+    deinit {
+        networkManager.stopMonitoring()
     }
     
     required init?(coder: NSCoder) {
@@ -66,6 +71,7 @@ internal class FindMovieViewController: UIViewController {
         
         setUiFindMovie()
         bindData()
+        observeNetwork()
     }
     
     private func setUiFindMovie() {
@@ -104,9 +110,34 @@ internal class FindMovieViewController: UIViewController {
                 self.applySnapshot(items: data)
             }
         case .noResults:
-            print("Data nil")
+            showError(title: "Not Found",
+                      message: "Sorry, no results were found for this keyword.",
+                      isReload: false)
         case .failure(let fail):
             print("Failure: ", fail)
+            showError(title: "Something wrong",
+                      message: fail)
+        }
+    }
+    
+    private func observeNetwork() {
+        networkManager.startMonitoring { [weak self] updates in
+            guard let self = self else { return }
+            
+            if !updates {
+                showError(title: "Connection Lost", message: "Please check your connection and try again.", isReload: false)
+            }
+        }
+    }
+    
+    private func showError(title: String, message: String, isReload: Bool = true) {
+        DispatchQueue.main.async {
+            self.presentPopup(title: title,
+                              message: message) {
+                if isReload {
+                    self.viewModel.reloadSearch()
+                }
+            }
         }
     }
 }

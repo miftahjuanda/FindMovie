@@ -14,6 +14,7 @@ protocol FindMovieViewModelProtocol {
     
     func findMovie(keyword: String)
     func pagination()
+    func reloadSearch()
 }
 
 internal class FindMovieViewModel: FindMovieViewModelProtocol {
@@ -22,9 +23,10 @@ internal class FindMovieViewModel: FindMovieViewModelProtocol {
     
     private var currentPage: Int = 1
     private var totalResults: Int = 0
+    private var retryCount: Int = 2
     private var keywordValue: String = ""
     private var disableFetch: Bool = false
-    private var findMovie = FindMovieEntity(search: [], totalResults: 0)
+    private var findMovie = FindMovieEntity()
     var viewType: CurrentValueSubject<ViewTypes<[SearchEntity]>, Never> = .init(.loading)
     var isFetchPagination: Bool = false
     
@@ -69,11 +71,14 @@ internal class FindMovieViewModel: FindMovieViewModelProtocol {
                         self.findMovie.search.append(contentsOf: value.search)
                         self.currentPage += 1
                     }
+                    self.retryCount = 2
                     self.isFetchPagination = false
                     self.viewType.send(.success(self.findMovie.search))
                 } else {
                     disableFetch = true
-                    self.viewType.send(.noResults)
+                    if !value.response && self.findMovie.search.count == 0 {
+                        self.viewType.send(.noResults)
+                    }
                 }
                 
             }).store(in: cancelBag)
@@ -87,6 +92,15 @@ internal class FindMovieViewModel: FindMovieViewModelProtocol {
         }
     }
     
+    func reloadSearch() {
+        keywordValue = keywordValue.isEmpty ? ["poli", "spider man", "avatar"].randomElement() ?? "poli" : keywordValue
+        
+        if retryCount > 0 {
+            retryCount -= 1
+            findMovie(keyword: keywordValue)
+        }
+    }
+    
     private func resetData(keyword: String) {
         if keywordValue != keyword {
             isFetchPagination = false
@@ -94,7 +108,7 @@ internal class FindMovieViewModel: FindMovieViewModelProtocol {
             currentPage = 1
             totalResults = 0
             keywordValue = keyword
-            findMovie = FindMovieEntity(search: [], totalResults: 0)
+            findMovie = FindMovieEntity()
         }
     }
 }

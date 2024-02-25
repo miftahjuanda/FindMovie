@@ -8,8 +8,9 @@
 import Foundation
 
 struct FindMovieEntity: Decodable {
-    var search: [SearchEntity]
-    var totalResults: Int
+    var search: [SearchEntity] = []
+    var totalResults: Int = 0
+    var response: Bool = false
 }
 
 struct SearchEntity: Decodable, Hashable {

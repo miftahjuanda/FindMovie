@@ -20,7 +20,9 @@ internal final class FindMovieProcessor: FindMovieProcessorProtocol {
                          isLoading: false)
         }) ?? []
         
+        let response: Bool = model?.response?.lowercased() == "true" ? true : false
         return FindMovieEntity(search: searchEntity,
-                                     totalResults: Int(model?.totalResults ?? "") ?? 0)
+                               totalResults: Int(model?.totalResults ?? "") ?? 0, 
+                               response: response)
     }
 }

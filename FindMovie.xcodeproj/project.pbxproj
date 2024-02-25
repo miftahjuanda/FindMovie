@@ -33,6 +33,8 @@
 		B03411402B89EBFF00A3D160 /* FindMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034113F2B89EBFF00A3D160 /* FindMovieViewModel.swift */; };
 		B03411422B8A08E700A3D160 /* ViewTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411412B8A08E700A3D160 /* ViewTypes.swift */; };
 		B03411442B8A560C00A3D160 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411432B8A560C00A3D160 /* String+Ext.swift */; };
+		B03411482B8B16C300A3D160 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411472B8B16C300A3D160 /* NetworkManager.swift */; };
+		B034114A2B8B19B800A3D160 /* ViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411492B8B19B800A3D160 /* ViewController+Ext.swift */; };
 		CA18726CB9148211EDCC07A9 /* Pods_FindMovieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6672C22B83CA92C1799BC01 /* Pods_FindMovieTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,8 @@
 		B034113F2B89EBFF00A3D160 /* FindMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieViewModel.swift; sourceTree = "<group>"; };
 		B03411412B8A08E700A3D160 /* ViewTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTypes.swift; sourceTree = "<group>"; };
 		B03411432B8A560C00A3D160 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		B03411472B8B16C300A3D160 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B03411492B8B19B800A3D160 /* ViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Ext.swift"; sourceTree = "<group>"; };
 		B91C172A18C0EF0B7BE60461 /* Pods-FindMovie-FindMovieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMovie-FindMovieUITests.debug.xcconfig"; path = "Target Support Files/Pods-FindMovie-FindMovieUITests/Pods-FindMovie-FindMovieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE84A0DC069E6E675BC39FBD /* Pods-FindMovieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMovieTests.release.xcconfig"; path = "Target Support Files/Pods-FindMovieTests/Pods-FindMovieTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -269,6 +273,7 @@
 			children = (
 				B034112B2B89D8DE00A3D160 /* Combine+Ext.swift */,
 				B03411432B8A560C00A3D160 /* String+Ext.swift */,
+				B03411492B8B19B800A3D160 /* ViewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -320,6 +325,7 @@
 			children = (
 				B034113D2B89EABF00A3D160 /* ApiConfigManager.swift */,
 				B03411412B8A08E700A3D160 /* ViewTypes.swift */,
+				B03411472B8B16C300A3D160 /* NetworkManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -570,10 +576,12 @@
 				B034112F2B89DAAA00A3D160 /* FindMovieUseCase.swift in Sources */,
 				B034112C2B89D8DE00A3D160 /* Combine+Ext.swift in Sources */,
 				B03411272B89D7F000A3D160 /* AlamofireHttpClient.swift in Sources */,
+				B034114A2B8B19B800A3D160 /* ViewController+Ext.swift in Sources */,
 				B03410E32B89AA8900A3D160 /* SceneDelegate.swift in Sources */,
 				B034111B2B89B49F00A3D160 /* LabelView.swift in Sources */,
 				B034111D2B89B4E600A3D160 /* StackView.swift in Sources */,
 				B03411242B89C63A00A3D160 /* MovieItemsCollectionViewCell.swift in Sources */,
+				B03411482B8B16C300A3D160 /* NetworkManager.swift in Sources */,
 				B03411402B89EBFF00A3D160 /* FindMovieViewModel.swift in Sources */,
 				B03411442B8A560C00A3D160 /* String+Ext.swift in Sources */,
 				B034113E2B89EABF00A3D160 /* ApiConfigManager.swift in Sources */,
