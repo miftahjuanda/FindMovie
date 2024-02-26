@@ -13,7 +13,6 @@
 		B03410E32B89AA8900A3D160 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03410E22B89AA8900A3D160 /* SceneDelegate.swift */; };
 		B03410EA2B89AA8B00A3D160 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03410E92B89AA8B00A3D160 /* Assets.xcassets */; };
 		B03410ED2B89AA8B00A3D160 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03410EB2B89AA8B00A3D160 /* LaunchScreen.storyboard */; };
-		B03410F82B89AA8B00A3D160 /* FindMovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03410F72B89AA8B00A3D160 /* FindMovieTests.swift */; };
 		B03411022B89AA8B00A3D160 /* FindMovieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411012B89AA8B00A3D160 /* FindMovieUITests.swift */; };
 		B03411042B89AA8B00A3D160 /* FindMovieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411032B89AA8B00A3D160 /* FindMovieUITestsLaunchTests.swift */; };
 		B03411152B89B07D00A3D160 /* FindMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411142B89B07D00A3D160 /* FindMovieViewController.swift */; };
@@ -37,6 +36,10 @@
 		B034114A2B8B19B800A3D160 /* ViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411492B8B19B800A3D160 /* ViewController+Ext.swift */; };
 		B03411522B8B4B9B00A3D160 /* LocalStorageStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411512B8B4B9B00A3D160 /* LocalStorageStack.swift */; };
 		B03411552B8B4C7300A3D160 /* LocalMovieData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B03411532B8B4C7300A3D160 /* LocalMovieData.xcdatamodeld */; };
+		B03411582B8B891A00A3D160 /* FindMovieUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411572B8B891A00A3D160 /* FindMovieUseCaseTest.swift */; };
+		B034115B2B8B905900A3D160 /* MockHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034115A2B8B905900A3D160 /* MockHTTPClient.swift */; };
+		B034115D2B8B910A00A3D160 /* MockLocalStorageStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034115C2B8B910A00A3D160 /* MockLocalStorageStack.swift */; };
+		B03411612B8BA20B00A3D160 /* FindMovieUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411602B8BA20B00A3D160 /* FindMovieUseCaseMock.swift */; };
 		CA18726CB9148211EDCC07A9 /* Pods_FindMovieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6672C22B83CA92C1799BC01 /* Pods_FindMovieTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +75,6 @@
 		B03410EC2B89AA8B00A3D160 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B03410EE2B89AA8B00A3D160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B03410F32B89AA8B00A3D160 /* FindMovieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindMovieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B03410F72B89AA8B00A3D160 /* FindMovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieTests.swift; sourceTree = "<group>"; };
 		B03410FD2B89AA8B00A3D160 /* FindMovieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindMovieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03411012B89AA8B00A3D160 /* FindMovieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieUITests.swift; sourceTree = "<group>"; };
 		B03411032B89AA8B00A3D160 /* FindMovieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -97,6 +99,10 @@
 		B03411492B8B19B800A3D160 /* ViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Ext.swift"; sourceTree = "<group>"; };
 		B03411512B8B4B9B00A3D160 /* LocalStorageStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageStack.swift; sourceTree = "<group>"; };
 		B03411542B8B4C7300A3D160 /* LocalMovie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalMovie.xcdatamodel; sourceTree = "<group>"; };
+		B03411572B8B891A00A3D160 /* FindMovieUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieUseCaseTest.swift; sourceTree = "<group>"; };
+		B034115A2B8B905900A3D160 /* MockHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHTTPClient.swift; sourceTree = "<group>"; };
+		B034115C2B8B910A00A3D160 /* MockLocalStorageStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocalStorageStack.swift; sourceTree = "<group>"; };
+		B03411602B8BA20B00A3D160 /* FindMovieUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieUseCaseMock.swift; sourceTree = "<group>"; };
 		B91C172A18C0EF0B7BE60461 /* Pods-FindMovie-FindMovieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMovie-FindMovieUITests.debug.xcconfig"; path = "Target Support Files/Pods-FindMovie-FindMovieUITests/Pods-FindMovie-FindMovieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE84A0DC069E6E675BC39FBD /* Pods-FindMovieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMovieTests.release.xcconfig"; path = "Target Support Files/Pods-FindMovieTests/Pods-FindMovieTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,7 +197,8 @@
 		B03410F62B89AA8B00A3D160 /* FindMovieTests */ = {
 			isa = PBXGroup;
 			children = (
-				B03410F72B89AA8B00A3D160 /* FindMovieTests.swift */,
+				B03411592B8B902C00A3D160 /* Mock */,
+				B03411562B8B88BD00A3D160 /* MainPage */,
 			);
 			path = FindMovieTests;
 			sourceTree = "<group>";
@@ -350,6 +357,24 @@
 				B03411512B8B4B9B00A3D160 /* LocalStorageStack.swift */,
 			);
 			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		B03411562B8B88BD00A3D160 /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				B03411572B8B891A00A3D160 /* FindMovieUseCaseTest.swift */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		B03411592B8B902C00A3D160 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				B034115A2B8B905900A3D160 /* MockHTTPClient.swift */,
+				B034115C2B8B910A00A3D160 /* MockLocalStorageStack.swift */,
+				B03411602B8BA20B00A3D160 /* FindMovieUseCaseMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -620,7 +645,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B03410F82B89AA8B00A3D160 /* FindMovieTests.swift in Sources */,
+				B03411612B8BA20B00A3D160 /* FindMovieUseCaseMock.swift in Sources */,
+				B03411582B8B891A00A3D160 /* FindMovieUseCaseTest.swift in Sources */,
+				B034115D2B8B910A00A3D160 /* MockLocalStorageStack.swift in Sources */,
+				B034115B2B8B905900A3D160 /* MockHTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
