@@ -39,7 +39,8 @@
 		B03411582B8B891A00A3D160 /* FindMovieUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411572B8B891A00A3D160 /* FindMovieUseCaseTest.swift */; };
 		B034115B2B8B905900A3D160 /* MockHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034115A2B8B905900A3D160 /* MockHTTPClient.swift */; };
 		B034115D2B8B910A00A3D160 /* MockLocalStorageStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034115C2B8B910A00A3D160 /* MockLocalStorageStack.swift */; };
-		B03411612B8BA20B00A3D160 /* FindMovieUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411602B8BA20B00A3D160 /* FindMovieUseCaseMock.swift */; };
+		B03411612B8BA20B00A3D160 /* MockFindMovieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411602B8BA20B00A3D160 /* MockFindMovieUseCase.swift */; };
+		B03411632B8C2E0900A3D160 /* FindMovieViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03411622B8C2E0900A3D160 /* FindMovieViewModelTest.swift */; };
 		CA18726CB9148211EDCC07A9 /* Pods_FindMovieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6672C22B83CA92C1799BC01 /* Pods_FindMovieTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,7 +103,8 @@
 		B03411572B8B891A00A3D160 /* FindMovieUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieUseCaseTest.swift; sourceTree = "<group>"; };
 		B034115A2B8B905900A3D160 /* MockHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHTTPClient.swift; sourceTree = "<group>"; };
 		B034115C2B8B910A00A3D160 /* MockLocalStorageStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocalStorageStack.swift; sourceTree = "<group>"; };
-		B03411602B8BA20B00A3D160 /* FindMovieUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieUseCaseMock.swift; sourceTree = "<group>"; };
+		B03411602B8BA20B00A3D160 /* MockFindMovieUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFindMovieUseCase.swift; sourceTree = "<group>"; };
+		B03411622B8C2E0900A3D160 /* FindMovieViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieViewModelTest.swift; sourceTree = "<group>"; };
 		B91C172A18C0EF0B7BE60461 /* Pods-FindMovie-FindMovieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMovie-FindMovieUITests.debug.xcconfig"; path = "Target Support Files/Pods-FindMovie-FindMovieUITests/Pods-FindMovie-FindMovieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE84A0DC069E6E675BC39FBD /* Pods-FindMovieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMovieTests.release.xcconfig"; path = "Target Support Files/Pods-FindMovieTests/Pods-FindMovieTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -363,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				B03411572B8B891A00A3D160 /* FindMovieUseCaseTest.swift */,
+				B03411622B8C2E0900A3D160 /* FindMovieViewModelTest.swift */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -372,7 +375,7 @@
 			children = (
 				B034115A2B8B905900A3D160 /* MockHTTPClient.swift */,
 				B034115C2B8B910A00A3D160 /* MockLocalStorageStack.swift */,
-				B03411602B8BA20B00A3D160 /* FindMovieUseCaseMock.swift */,
+				B03411602B8BA20B00A3D160 /* MockFindMovieUseCase.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -645,10 +648,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B03411612B8BA20B00A3D160 /* FindMovieUseCaseMock.swift in Sources */,
+				B03411612B8BA20B00A3D160 /* MockFindMovieUseCase.swift in Sources */,
 				B03411582B8B891A00A3D160 /* FindMovieUseCaseTest.swift in Sources */,
 				B034115D2B8B910A00A3D160 /* MockLocalStorageStack.swift in Sources */,
 				B034115B2B8B905900A3D160 /* MockHTTPClient.swift in Sources */,
+				B03411632B8C2E0900A3D160 /* FindMovieViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
