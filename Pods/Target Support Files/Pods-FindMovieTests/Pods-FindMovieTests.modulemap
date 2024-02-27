@@ -1,0 +1,6 @@
+framework module Pods_FindMovieTests {
+  umbrella header "Pods-FindMovieTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
